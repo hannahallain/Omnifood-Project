@@ -1,0 +1,86 @@
+/* .test {
+  background-color: red;
+  padding: 100px;
+
+  width: 1000px;
+  If the container width is larger than the max width of the element, then it will be the specified width. But if container width is smaller, the element will be 100% of the container's width.
+
+  max-width: 50rem;
+  color: #fff;
+  padding: 4rem;
+  font-size: 2rem;
+} */
+
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+  /* add !important to small helper classes like this one*/
+}
+
+<!-- Use main element on the main content of the page - unique content, not repeated on multiple pages -->
+
+
+/* Trick to add border inside */
+  box-shadow: inset 0 0 0 3px #fff;
+
+/* Put transition on original "State" */
+  transition: all 0.3s;
+
+/* Define a height, rather than padding for sticky navs */
+
+
+padding options:
+top / right / bottom / left 
+top / horizontal / left
+
+*************************
+ADDING BACKGROUND CIRCLES W/ PSEUDO-CLASSES AND ABSOLUTE POSITIONING IN CSS 
+
+.step-image-box::before,
+.step-image-box::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.step-image-box::before {
+  background-color: #fdf2e9;
+  width: 60%;
+  /* height: 60%; */
+
+  /* 60% of parents width, intrinsic height is technically 0 */
+  padding-bottom: 60%;
+  z-index: -2;
+  /* z-index to push circle to the back */
+}
+
+.step-image-box::after {
+  background-color: #fae5d3;
+  width: 45%;
+  padding-bottom: 45%;
+  z-index: -1;
+}
+
+position: relative; added to image box.
+*************************
+
+ZOOM IN IMAGE GALLERY TRICK
+
+.gallery-item {
+  overflow: hidden;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  transition: all 0.4s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+*************************
